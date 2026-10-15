@@ -1,0 +1,117 @@
+{
+  "boundary": "Original accepted export before revision, fresh storage, no wallet, mocked RPC, 390x844 at scrollY=0. No live transactions.",
+  "results": [
+    {
+      "engine": "chromium",
+      "layout": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 128,
+          "top": 0,
+          "right": 390,
+          "bottom": 128,
+          "left": 0
+        },
+        "heading": {
+          "x": 39,
+          "y": 219,
+          "width": 266,
+          "height": 40,
+          "top": 219,
+          "right": 305,
+          "bottom": 259,
+          "left": 39
+        },
+        "action": {
+          "x": 39,
+          "y": 829.109375,
+          "width": 312,
+          "height": 48,
+          "top": 829.109375,
+          "right": 351,
+          "bottom": 877.109375,
+          "left": 39
+        },
+        "scrollY": 0,
+        "width": 390,
+        "height": 844
+      },
+      "routes": [
+        {
+          "route": "#/grab",
+          "headingBefore": "Open a red packet",
+          "hashAfter": "#main",
+          "headingAfter": "Send a little luck",
+          "fieldCount": 0,
+          "skipFocused": true
+        },
+        {
+          "route": "#/p/1",
+          "headingBefore": "A little good fortune",
+          "hashAfter": "#main",
+          "headingAfter": "Send a little luck",
+          "fieldCount": 0,
+          "skipFocused": true
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "layout": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 128,
+          "top": 0,
+          "right": 390,
+          "bottom": 128,
+          "left": 0
+        },
+        "heading": {
+          "x": 39,
+          "y": 219,
+          "width": 266,
+          "height": 80,
+          "top": 219,
+          "right": 305,
+          "bottom": 299,
+          "left": 39
+        },
+        "action": {
+          "x": 39,
+          "y": 874.109375,
+          "width": 312,
+          "height": 48,
+          "top": 874.109375,
+          "right": 351,
+          "bottom": 922.109375,
+          "left": 39
+        },
+        "scrollY": 0,
+        "width": 390,
+        "height": 844
+      },
+      "routes": [
+        {
+          "route": "#/grab",
+          "headingBefore": "Open a red packet",
+          "hashAfter": "#main",
+          "headingAfter": "Send a little luck",
+          "fieldCount": 0,
+          "skipFocused": true
+        },
+        {
+          "route": "#/p/1",
+          "headingBefore": "A little good fortune",
+          "hashAfter": "#main",
+          "headingAfter": "Send a little luck",
+          "fieldCount": 0,
+          "skipFocused": true
+        }
+      ]
+    }
+  ]
+}

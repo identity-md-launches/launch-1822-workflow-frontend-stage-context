@@ -1,0 +1,956 @@
+{
+  "testedAt": "2026-10-15T09:15:16.576Z",
+  "boundary": "Production export under /preview/; fresh browser storage, no injected wallet, fixture JSON-RPC. No live transactions.",
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "results": [
+    {
+      "engine": "chromium",
+      "name": "zh: first screen and reflow at 320/390/768/1440",
+      "passed": true,
+      "measurements": [
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 320,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 76
+          },
+          "brand": {
+            "x": 12,
+            "y": 25.203125,
+            "width": 63.640625,
+            "height": 25.59375
+          },
+          "language": {
+            "x": 182,
+            "y": 16,
+            "width": 44,
+            "height": 44
+          },
+          "wallet": {
+            "x": 230,
+            "y": 16,
+            "width": 78,
+            "height": 44
+          },
+          "heading": {
+            "x": 31,
+            "y": 163,
+            "width": 171.453125,
+            "height": 30
+          },
+          "primary": {
+            "x": 31,
+            "y": 718.328125,
+            "width": 258,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 390,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 76
+          },
+          "brand": {
+            "x": 16,
+            "y": 18,
+            "width": 107.640625,
+            "height": 40
+          },
+          "language": {
+            "x": 248,
+            "y": 16,
+            "width": 44,
+            "height": 44
+          },
+          "wallet": {
+            "x": 296,
+            "y": 16,
+            "width": 78,
+            "height": 44
+          },
+          "heading": {
+            "x": 39,
+            "y": 167,
+            "width": 171.453125,
+            "height": 40
+          },
+          "primary": {
+            "x": 39,
+            "y": 732.328125,
+            "width": 312,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 768,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 107.1875
+          },
+          "brand": {
+            "x": 24,
+            "y": 28,
+            "width": 182,
+            "height": 51.1875
+          },
+          "language": {
+            "x": 572,
+            "y": 31.59375,
+            "width": 44,
+            "height": 44
+          },
+          "wallet": {
+            "x": 628,
+            "y": 31.59375,
+            "width": 116,
+            "height": 44
+          },
+          "heading": {
+            "x": 49,
+            "y": 230.1875,
+            "width": 171.453125,
+            "height": 40
+          },
+          "primary": {
+            "x": 49,
+            "y": 791.125,
+            "width": 510,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 1440,
+          "header": {
+            "x": 120,
+            "y": 0,
+            "width": 1200,
+            "height": 107.1875
+          },
+          "brand": {
+            "x": 160,
+            "y": 28,
+            "width": 182,
+            "height": 51.1875
+          },
+          "language": {
+            "x": 1108,
+            "y": 31.59375,
+            "width": 44,
+            "height": 44
+          },
+          "wallet": {
+            "x": 1164,
+            "y": 31.59375,
+            "width": 116,
+            "height": 44
+          },
+          "heading": {
+            "x": 233,
+            "y": 238.1875,
+            "width": 200,
+            "height": 50
+          },
+          "primary": {
+            "x": 233,
+            "y": 809.125,
+            "width": 494,
+            "height": 48
+          }
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "en: first screen and reflow at 320/390/768/1440",
+      "passed": true,
+      "measurements": [
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 320,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 107.59375
+          },
+          "brand": {
+            "x": 12,
+            "y": 16,
+            "width": 106.046875,
+            "height": 25.59375
+          },
+          "language": {
+            "x": 12,
+            "y": 47.59375,
+            "width": 50,
+            "height": 44
+          },
+          "wallet": {
+            "x": 66,
+            "y": 47.59375,
+            "width": 139.359375,
+            "height": 44
+          },
+          "heading": {
+            "x": 31,
+            "y": 194.59375,
+            "width": 258,
+            "height": 30
+          },
+          "primary": {
+            "x": 31,
+            "y": 835.46875,
+            "width": 258,
+            "height": 72
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 390,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 76
+          },
+          "brand": {
+            "x": 16,
+            "y": 18,
+            "width": 150.046875,
+            "height": 40
+          },
+          "language": {
+            "x": 180.640625,
+            "y": 16,
+            "width": 50,
+            "height": 44
+          },
+          "wallet": {
+            "x": 234.640625,
+            "y": 16,
+            "width": 139.359375,
+            "height": 44
+          },
+          "heading": {
+            "x": 39,
+            "y": 167,
+            "width": 270.78125,
+            "height": 40
+          },
+          "primary": {
+            "x": 39,
+            "y": 754.71875,
+            "width": 312,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 768,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 107.1875
+          },
+          "brand": {
+            "x": 24,
+            "y": 28,
+            "width": 196.203125,
+            "height": 51.1875
+          },
+          "language": {
+            "x": 504.640625,
+            "y": 31.59375,
+            "width": 50,
+            "height": 44
+          },
+          "wallet": {
+            "x": 566.640625,
+            "y": 31.59375,
+            "width": 177.359375,
+            "height": 44
+          },
+          "heading": {
+            "x": 49,
+            "y": 230.1875,
+            "width": 270.78125,
+            "height": 40
+          },
+          "primary": {
+            "x": 49,
+            "y": 791.125,
+            "width": 510,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 1440,
+          "header": {
+            "x": 120,
+            "y": 0,
+            "width": 1200,
+            "height": 107.1875
+          },
+          "brand": {
+            "x": 160,
+            "y": 28,
+            "width": 196.203125,
+            "height": 51.1875
+          },
+          "language": {
+            "x": 1040.640625,
+            "y": 31.59375,
+            "width": 50,
+            "height": 44
+          },
+          "wallet": {
+            "x": 1102.640625,
+            "y": 31.59375,
+            "width": 177.359375,
+            "height": 44
+          },
+          "heading": {
+            "x": 233,
+            "y": 238.1875,
+            "width": 285.59375,
+            "height": 50
+          },
+          "primary": {
+            "x": 233,
+            "y": 809.125,
+            "width": 494,
+            "height": 48
+          }
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "keyboard skip preserves #/ and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/",
+          "historyLength": 3
+        },
+        "after": {
+          "hash": "#/",
+          "historyLength": 3,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#amount",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "keyboard skip preserves #/grab and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/grab",
+          "historyLength": 4
+        },
+        "after": {
+          "hash": "#/grab",
+          "historyLength": 4,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#packet-id",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "keyboard skip preserves #/p/1 and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/p/1",
+          "historyLength": 5
+        },
+        "after": {
+          "hash": "#/p/1",
+          "historyLength": 5,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#grab-phrase",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "keyboard skip preserves #/swap and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/swap",
+          "historyLength": 6
+        },
+        "after": {
+          "hash": "#/swap",
+          "historyLength": 6,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#swap-amount",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "keyboard skip preserves #/funds and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/funds",
+          "historyLength": 7
+        },
+        "after": {
+          "hash": "#/funds",
+          "historyLength": 7,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#token-amount",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "zh: first screen and reflow at 320/390/768/1440",
+      "passed": true,
+      "measurements": [
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 320,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 76
+          },
+          "brand": {
+            "x": 12,
+            "y": 25.203125,
+            "width": 63.640625,
+            "height": 25.59375
+          },
+          "language": {
+            "x": 182,
+            "y": 16,
+            "width": 44,
+            "height": 44
+          },
+          "wallet": {
+            "x": 230,
+            "y": 16,
+            "width": 78,
+            "height": 44
+          },
+          "heading": {
+            "x": 31,
+            "y": 163,
+            "width": 171.453125,
+            "height": 30
+          },
+          "primary": {
+            "x": 31,
+            "y": 725.328125,
+            "width": 258,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 390,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 76
+          },
+          "brand": {
+            "x": 16,
+            "y": 18,
+            "width": 107.640625,
+            "height": 40
+          },
+          "language": {
+            "x": 248,
+            "y": 16,
+            "width": 44,
+            "height": 44
+          },
+          "wallet": {
+            "x": 296,
+            "y": 16,
+            "width": 78,
+            "height": 44
+          },
+          "heading": {
+            "x": 39,
+            "y": 167,
+            "width": 171.453125,
+            "height": 40
+          },
+          "primary": {
+            "x": 39,
+            "y": 739.328125,
+            "width": 312,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 768,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 107.1875
+          },
+          "brand": {
+            "x": 24,
+            "y": 28,
+            "width": 182,
+            "height": 51.1875
+          },
+          "language": {
+            "x": 572,
+            "y": 31.59375,
+            "width": 44,
+            "height": 44
+          },
+          "wallet": {
+            "x": 628,
+            "y": 31.59375,
+            "width": 116,
+            "height": 44
+          },
+          "heading": {
+            "x": 49,
+            "y": 230.1875,
+            "width": 171.453125,
+            "height": 40
+          },
+          "primary": {
+            "x": 49,
+            "y": 798.125,
+            "width": 510,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 1440,
+          "header": {
+            "x": 120,
+            "y": 0,
+            "width": 1200,
+            "height": 107.1875
+          },
+          "brand": {
+            "x": 160,
+            "y": 28,
+            "width": 182,
+            "height": 51.1875
+          },
+          "language": {
+            "x": 1108,
+            "y": 31.59375,
+            "width": 44,
+            "height": 44
+          },
+          "wallet": {
+            "x": 1164,
+            "y": 31.59375,
+            "width": 116,
+            "height": 44
+          },
+          "heading": {
+            "x": 233,
+            "y": 238.1875,
+            "width": 200,
+            "height": 50
+          },
+          "primary": {
+            "x": 233,
+            "y": 816.125,
+            "width": 494,
+            "height": 48
+          }
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "en: first screen and reflow at 320/390/768/1440",
+      "passed": true,
+      "measurements": [
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 320,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 107.59375
+          },
+          "brand": {
+            "x": 12,
+            "y": 16,
+            "width": 106.046875,
+            "height": 25.59375
+          },
+          "language": {
+            "x": 12,
+            "y": 47.59375,
+            "width": 50,
+            "height": 44
+          },
+          "wallet": {
+            "x": 66,
+            "y": 47.59375,
+            "width": 139.359375,
+            "height": 44
+          },
+          "heading": {
+            "x": 31,
+            "y": 194.59375,
+            "width": 258,
+            "height": 30
+          },
+          "primary": {
+            "x": 31,
+            "y": 840.46875,
+            "width": 258,
+            "height": 72
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 390,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 76
+          },
+          "brand": {
+            "x": 16,
+            "y": 18,
+            "width": 150.046875,
+            "height": 40
+          },
+          "language": {
+            "x": 180.640625,
+            "y": 16,
+            "width": 50,
+            "height": 44
+          },
+          "wallet": {
+            "x": 234.640625,
+            "y": 16,
+            "width": 139.359375,
+            "height": 44
+          },
+          "heading": {
+            "x": 39,
+            "y": 167,
+            "width": 306.734375,
+            "height": 40
+          },
+          "primary": {
+            "x": 39,
+            "y": 778.5,
+            "width": 312,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 768,
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 107.1875
+          },
+          "brand": {
+            "x": 24,
+            "y": 28,
+            "width": 196.203125,
+            "height": 51.1875
+          },
+          "language": {
+            "x": 504.640625,
+            "y": 31.59375,
+            "width": 50,
+            "height": 44
+          },
+          "wallet": {
+            "x": 566.640625,
+            "y": 31.59375,
+            "width": 177.359375,
+            "height": 44
+          },
+          "heading": {
+            "x": 49,
+            "y": 230.1875,
+            "width": 306.734375,
+            "height": 40
+          },
+          "primary": {
+            "x": 49,
+            "y": 796.125,
+            "width": 510,
+            "height": 48
+          }
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 844
+          },
+          "scrollY": 0,
+          "documentWidth": 1440,
+          "header": {
+            "x": 120,
+            "y": 0,
+            "width": 1200,
+            "height": 107.1875
+          },
+          "brand": {
+            "x": 160,
+            "y": 28,
+            "width": 196.203125,
+            "height": 51.1875
+          },
+          "language": {
+            "x": 1040.640625,
+            "y": 31.59375,
+            "width": 50,
+            "height": 44
+          },
+          "wallet": {
+            "x": 1102.640625,
+            "y": 31.59375,
+            "width": 177.359375,
+            "height": 44
+          },
+          "heading": {
+            "x": 233,
+            "y": 238.1875,
+            "width": 383.421875,
+            "height": 50
+          },
+          "primary": {
+            "x": 233,
+            "y": 814.125,
+            "width": 494,
+            "height": 48
+          }
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "keyboard skip preserves #/ and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/",
+          "historyLength": 3
+        },
+        "after": {
+          "hash": "#/",
+          "historyLength": 3,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#amount",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "keyboard skip preserves #/grab and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/grab",
+          "historyLength": 4
+        },
+        "after": {
+          "hash": "#/grab",
+          "historyLength": 4,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#packet-id",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "keyboard skip preserves #/p/1 and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/p/1",
+          "historyLength": 5
+        },
+        "after": {
+          "hash": "#/p/1",
+          "historyLength": 5,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#grab-phrase",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "keyboard skip preserves #/swap and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/swap",
+          "historyLength": 6
+        },
+        "after": {
+          "hash": "#/swap",
+          "historyLength": 6,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#swap-amount",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "keyboard skip preserves #/funds and input",
+      "passed": true,
+      "measurements": {
+        "before": {
+          "hash": "#/funds",
+          "historyLength": 7
+        },
+        "after": {
+          "hash": "#/funds",
+          "historyLength": 7,
+          "focus": "main",
+          "mainTop": 0,
+          "scrollY": 88
+        },
+        "field": "#token-amount",
+        "inputPreserved": true
+      }
+    },
+    {
+      "engine": "all",
+      "name": "no runtime or local resource errors",
+      "passed": true
+    }
+  ],
+  "runtimeErrors": [],
+  "completedHeaderProbes": [
+    {
+      "engine": "chromium",
+      "path": "/preview/",
+      "method": "HEAD",
+      "status": 200
+    }
+  ]
+}

@@ -80,14 +80,18 @@ npm run typecheck --prefix web
 npm run build --prefix web
 npm run test --prefix web
 npm run verify --prefix web
-# Install a local Chromium if needed; this browser cache is not a deliverable.
-PLAYWRIGHT_BROWSERS_PATH=/tmp/imd-browsers web/node_modules/.bin/playwright install chromium
+# Install browsers if needed; this browser cache is not a deliverable.
+PLAYWRIGHT_BROWSERS_PATH=/tmp/imd-browsers web/node_modules/.bin/playwright install chromium webkit
 PLAYWRIGHT_BROWSERS_PATH=/tmp/imd-browsers npm run test:browser --prefix web
+# Both-language first screen and route-preserving keyboard skip, Chromium + WebKit.
+PLAYWRIGHT_BROWSERS_PATH=/tmp/imd-browsers web/node_modules/.bin/tsx web/tests/layout-navigation.mjs
 # Optional live reads and quotes only; this script never sends transactions.
 PLAYWRIGHT_BROWSERS_PATH=/tmp/imd-browsers npm run check:live --prefix web
 ```
 
 The browser suite serves the production export under `/preview/`, supplies a test-only EIP-6963 wallet and JSON-RPC fixture, blocks other network requests, checks interactions and produces evidence in `docs/validation/`. Mock contracts are never bundled into the app. Real mobile app handoff, Coinbase passkey creation, live funded transactions, a native screen reader and native browser zoom remain untested. The UI was measured at 320, 390, 768 and 1440 CSS pixels, with text enlargement separately tested at 200%.
+
+The focused `layout-navigation.mjs` regression uses fresh storage with no injected wallet. It checks the Chinese and English Send action at 390×844, reflow at all four widths, and keyboard skip-link focus, scroll, route/history and form preservation on Send, Grab, packet, Swap and Funds. It writes `revision-ui.json` and English mobile screenshots. Both browser engines and their OS libraries are required; `--chromium-only` explicitly limits a local run and records that limitation in its engine list.
 
 See [validation](../docs/FRONTEND-VALIDATION.md), [implemented design](../docs/DESIGN.md), and [attribution](../docs/ATTRIBUTION.md). The design document is in `docs/` because the assignment's explicit write budget forbids a root `DESIGN.md`.
 

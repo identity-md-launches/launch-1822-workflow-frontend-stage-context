@@ -113,7 +113,16 @@ export default function App() {
   ];
   return (
     <>
-      <a className="skip-link" href="#main">
+      <a
+        className="skip-link"
+        href="#main"
+        onClick={(event) => {
+          event.preventDefault();
+          const main = document.getElementById("main");
+          main?.focus({ preventScroll: true });
+          main?.scrollIntoView({ block: "start" });
+        }}
+      >
         {t("跳至内容", "Skip to content")}
       </a>
       <header className="site-header">

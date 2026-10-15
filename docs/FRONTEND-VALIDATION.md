@@ -1,6 +1,6 @@
 # Frontend validation
 
-Validated on 15 October 2026 against the final production export. This is worker-generated evidence, not independent certification, a contract audit or publication verification. No live transaction, approval, deployment or publication was performed.
+Revalidated on 15 October 2026 after the two reported UI defects were reproduced and repaired. This is worker-generated evidence, not independent certification, a contract audit or publication verification. No live transaction, approval, deployment or publication was performed.
 
 ## Delivered scope
 
@@ -8,21 +8,35 @@ The Chinese-first, bilingual frontend implements Send, Grab/Result, Swap and Fun
 
 The assignment's explicit path budget takes precedence over its request for a root `DESIGN.md`. The implemented design is documented at [docs/DESIGN.md](DESIGN.md). `web/.gitignore` is the only ignore-file addition and was explicitly permitted. Dependencies, caches, browser binaries and dependency archives are excluded from submission; none are needed for static serving.
 
+## Revision findings and recheck
+
+Both reports reproduced on the original export in Chromium and WebKit with fresh storage, no injected wallet and mocked RPC. [Original measurements](validation/revision-before.json) supersede the initial round's incorrect claim that the English action fitted the first screen.
+
+| Finding | Reproduction and scoped fix | Final check |
+| --- | --- | --- |
+| `439779a…` — English mobile first screen | At 390×844 and scrollY=0, the header was 128 px high. The 48 px action ended at 877.109375 px in Chromium and 922.109375 px in WebKit; WebKit's heading wrapped to 80 px. At `web/src/styles.css:1039`, the mobile brand and wallet now use the existing `--text-small` token. At `web/src/styles.css:1086`, only the decorative Send heading icon is hidden. Control heights, inputs, labels and explanations are retained. | Both headers are now 76 px and headings 40 px high. The unchanged 48 px action ends at **802.71875 px in Chromium** and **826.5 px in WebKit**. Both languages pass at 390×844; neither overflows horizontally at 320/390/768/1440. |
+| `5c53e63…` — skip link changes route | From `#/grab` with ID 123 and `#/p/1` with a typed passphrase, Enter on the skip link changed the hash to `#main`, displayed Send and removed the field in both engines. At `web/src/App.tsx:116`, its click handler now prevents fragment navigation, focuses the existing main landmark and scrolls it into view. | Keyboard checks preserve the hash, browser history length and entered value on Send, Grab, packet, Swap and Funds. Focus lands on main and its top reaches the viewport start in both engines. |
+
+The focused [regression script](../web/tests/layout-navigation.mjs) passed **15/15** checks on the final export: [measurements and results](validation/revision-ui.json), [English Chromium screenshot](validation/revision-chromium-en-390.png), [English WebKit screenshot](validation/revision-webkit-en-390.png). Both screenshots were visually inspected. Chromium reports one cancelled response body after Coinbase SDK's successful HTTP 200 `HEAD` header probe; the harness records that exact case separately. There are no application console errors, failed assets or other local resource failures.
+
+The six Better Interface domains were reconsidered for the changed surfaces: accessibility (skip focus, form continuity and retained hit areas), layout (first screen and reflow), writing (all labels and transaction explanations preserved), typography (existing small token and heading wrapping), colors (unchanged semantic palette, refreshed axe/probe contrast checks), and UI (only an aria-hidden ornament removed; desktop and transaction controls preserved). No unrelated design change was made. Complete for this revision's scope; the device, screen-reader and live-transaction limitations below still apply.
+
 ## Final checks
 
 | Check | Result and evidence |
 | --- | --- |
 | Clean dependency installation | `npm ci --prefix web` succeeded using the committed lockfile. Node 24, npm 11; Vite 8.3.4, React 19.3.1, TypeScript 5.9.3, Viem 2.57.7 and Wagmi 3.7.7. |
-| Typecheck and production build | `npm run build --prefix web` passed, including `tsc --noEmit`, Vite and manifest generation/verification. [Build log](validation/build.log). Vite reports a non-blocking 500 KB chunk warning: the main JavaScript is about 663 KB minified / 201 KB gzip; the entire export is 859,010 bytes. |
+| Typecheck and production build | `npm run build --prefix web` passed, including `tsc --noEmit`, Vite and manifest generation/verification. [Build log](validation/build.log). Vite reports a non-blocking 500 KB chunk warning: the main JavaScript is about 663 KB minified / 201 KB gzip; the entire export is 859,214 bytes. |
 | Unit/encoding tests | **10/10 passed**, covering exact key derivation, signature binding/replay boundaries, amount precision and limits, random phrase format, eligibility boundaries, six-field swap encoding, slippage, chain addition and nested errors. [Log](validation/unit-tests.log); reproducible source in `web/tests/core.test.ts`. |
 | Browser interactions | **20/20 passed** against the production files at a `/preview/` subpath. EIP-6963 wallet and JSON-RPC were mocked, and other external requests were blocked. [Scenario results](validation/interactions.json). |
+| Revision regressions | **15/15 passed** in Chromium 156 and WebKit 27.2: both-language mobile first screens, reflow, keyboard skip focus/scroll and route/form continuity. [Results](validation/revision-ui.json). |
 | Accessibility automation | Axe: **0 violations**, 43 passing rules in the tested English initial view. [Result](validation/accessibility.json). This is not exhaustive accessibility coverage. |
 | Pinned design probe | **16/16 passed**, rendering at 320, 390 and 1440 CSS pixels, with no script errors, missing local files, horizontal scroll, overlapping text or clipped critical text. [Full probe output](validation/taste.json). The final 390 screenshot was visually inspected: brand, wallet control, amount/slots, mode, passphrase, expiry, net/burn and primary action are visible in the first 844 CSS pixels. |
 | Manifest integrity | Exact handoff identifiers, complete contract set, network/chain-add objects, pool key, two pinned canonical ABI hashes and all **13** asset hashes verified. Manifest excludes itself. All paths are relative; no symlinks or extra manifest keys. Run `npm run verify --prefix web`. |
-| Live reads | Both configured public RPCs returned chain **4663**, nonempty code for both application contracts, IMD, all six configured Uniswap contracts and the pool hook. Immutable IMD, application limits, token decimals/symbol and pool state were read. [Timestamped results](validation/live-read.json). |
+| Live reads (initial round, retained) | Both configured public RPCs returned chain **4663**, nonempty code for both application contracts, IMD, all six configured Uniswap contracts and the pool hook. Immutable IMD, application limits, token decimals/symbol and pool state were read. [Timestamped results](validation/live-read.json). The live-read suite was not repeated for this UI revision. |
 | Packaging | Source, lockfile, export and evidence fit the 8 MiB submission budget. A complete tree snapshot and an incremental Git bundle were each checked against a conservative 3 MiB bound; see [packaging evidence](validation/packaging.json). Temporary checkouts/bundles remain outside deliverables. No submodule or dependency/cache directory is included. |
 
-The recorded final interaction run completed at `2026-10-15T08:40:48.842Z`; final live reads began at `2026-10-15T08:43:58.583Z`. No application source or export was changed after these checks. Documentation and packaging evidence were finalized afterward.
+The refreshed full interaction run completed at `2026-10-15T09:12:06.563Z`; focused Chromium/WebKit regressions completed at `2026-10-15T09:15:16.576Z`. No application source or export changed afterward. Build, unit, browser, accessibility and probe evidence was refreshed; historical live-read evidence from `2026-10-15T08:43:58.583Z` is retained and identified above. Documentation and packaging evidence were finalized afterward.
 
 ## Interaction coverage
 
@@ -62,7 +76,7 @@ The pinned contents/workflow, core principles of all six domains and relevant su
 | High / swap availability | `web/src/pages/Swap.tsx:139` | Treating zero active liquidity as an unusable pool incorrectly blocked a real successful quote. Removed that gate, retained verified code/initialization prerequisites, and made the quoter authoritative. Added an empty-active-range browser fixture. |
 | High / transaction continuity | `web/src/context.tsx:41` and `web/src/context.tsx:102` | A page reload could lose pending-action context. Added a namespaced session journal, shared lock, receipt recovery and packet-event recovery; delayed-receipt and reload tests pass. |
 | Medium / keyboard | `web/src/components/Wallet.tsx:155` | The wallet sheet needed deterministic focus containment and return. Added explicit Tab wrapping and dismissal handling, validated with keyboard interaction and focus screenshot. |
-| Medium / layout | `web/src/styles.css:317` and `web/src/styles.css:1089` | Enlarged text and long values could make navigation/header content too wide. Allowed wrapping and flexible minimum widths; 200% text and long-balance/address checks now pass. |
+| Medium / layout | `web/src/styles.css:317` and `web/src/styles.css:1093` | Enlarged text and long values could make navigation/header content too wide. Allowed wrapping and flexible minimum widths; 200% text and long-balance/address checks now pass. |
 | Medium / hierarchy | `web/src/styles.css:339` | Initial navigation pill treatment triggered the probe's eyebrow/kicker heuristic. Changed active navigation to an underline; no kicker-label findings remain. |
 | Low / writing | `web/src/pages/Send.tsx` | An unavailable-balance dash failed the pinned glyph check and provided little guidance. Replaced it with localized “Connect to view” and a distinct loading state. |
 | Medium / errors | `web/src/errors.ts:130` | The deployed quoter wraps `NotEnoughLiquidity` in `UnexpectedRevertBytes`. Added nested error decoding, including router execution wrappers, so the user sees an actionable liquidity explanation. Unit tests and live read-only quotes confirm translation. |
@@ -71,7 +85,7 @@ No failed first-screen or repeated design-probe check remains. The probe notes f
 
 ## Live-chain observations and boundaries
 
-At blocks **89,090,794** and **89,090,797**, both public endpoints reported `nextId = 1`, `totalEscrow = 0`, IMD decimals 18, minimum share 0.01 IMD, maximum 200 slots, duration 600–604800 seconds and reveal grace 86400 seconds. The pool was initialized at tick 128998 with fee 12500 and active liquidity zero.
+These observations are retained from the initial round, not rerun as part of the UI revision. At blocks **89,090,794** and **89,090,797**, both public endpoints reported `nextId = 1`, `totalEscrow = 0`, IMD decimals 18, minimum share 0.01 IMD, maximum 200 slots, duration 600–604800 seconds and reveal grace 86400 seconds. The pool was initialized at tick 128998 with fee 12500 and active liquidity zero.
 
 A read-only quote for **0.01 IMD → HONGBAO** returned **3926.885560341990674840 HONGBAO** with gas estimate 87612 on both endpoints. The reverse **0.01 HONGBAO → IMD** quote reverted with insufficient liquidity. These are timestamped quotes, not promised prices. A v4 swap can cross an empty active range, so zero active liquidity alone does not disable quoting. The UI shows the live quote or translated revert for the selected direction and amount.
 
@@ -81,7 +95,7 @@ Unperformed checks and operational limits:
 
 - No funded mainnet create, grab, reveal, settle, refund, claim, approval, transfer or swap. Browser tests model those effects and verify requests; they cannot establish live execution, token economics or end-to-end contract behavior. No claim is made that the earlier contract test suite was rerun.
 - No real Coinbase passkey creation, wallet-extension signing, native wallet app handoff or physical mobile device test. EIP-6963 and chain switch/add behavior were checked with a test provider; SDK integration was bundled and the picker exercised.
-- No native screen reader, native browser zoom, forced-colors device or full cross-browser matrix. The actual checks use Chromium and 200% CSS text enlargement.
+- No native screen reader, native browser zoom, forced-colors device or full cross-browser transaction matrix. The full interaction suite and 200% CSS text enlargement use Chromium; the revision's layout/navigation checks also use WebKit. WebKit ran with OS libraries extracted to temporary storage; its system-package preflight was bypassed after executable dependencies and launch were checked. Native Safari/iPhone and media playback were not tested.
 - Lucky backup codes live in the creator's browser and require the explicit private backup. Clearing storage or losing that backup can prevent reveal; permissionless equal settlement remains available at the contract's time. Same-origin scripts can access local storage.
 - A dropped transaction without a receipt remains locked in the open session; inspect wallet/explorer state before retrying. Pending recovery is best effort when browser storage is denied.
 - No on-chain USD source was provided, so the interface uses actual token units and quoted token exchange rates. Public RPC availability, quotes and balances can change.
@@ -93,9 +107,9 @@ Unperformed checks and operational limits:
 Install, build and test commands are in [web/README.md](../web/README.md). Browser and live-read scripts install no runtime server into the export and never require a real private key. The pinned design probe was run from the repository root:
 
 ```sh
-PLAYWRIGHT_BROWSERS_PATH=/tmp/imd-browsers \
+PLAYWRIGHT_BROWSERS_PATH=/tmp/imd-revision-browsers \
 IMD_PLAYWRIGHT="$PWD/web/node_modules/playwright/index.mjs" \
-node .imd/reads/skills/design-critic/scripts/taste.mjs --out test/scratch/taste-final
+node .imd/reads/skills/design-critic/scripts/taste.mjs --out test/scratch/taste
 ```
 
 The assignment removes `.imd/reads/` and `test/scratch/` before delivery. Its probe therefore requires the same pinned input to be supplied again; the final report is preserved here. The frontend's own tests, manifest verifier and live-read checker remain reproducible from the delivered source and lockfile without those temporary paths.

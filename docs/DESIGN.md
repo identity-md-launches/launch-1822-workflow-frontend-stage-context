@@ -43,7 +43,7 @@ Headings balance their lines; supporting paragraphs use pretty wrapping. Amounts
 
 The header is capped at 1200 px. The main grid and footer are capped at 1120 px, with 40 px horizontal padding on wide screens. The content grid uses `minmax(0, 560px)` for the form and a flexible secondary column, separated by 64 px. Panels use 32 px padding; common intra-group gaps are 6–12 px and inter-group gaps 16–28 px.
 
-At 920 px, horizontal padding and panel padding reduce to 24 px and the column gap to 32 px. At 760 px, the layout becomes one column with 16 px outer margins and 22 px panel padding; the decorative illustration disappears, the brand subtitle is hidden, and the header may wrap. At 350 px, margins become 12 px and panel padding 18 px. Navigation wraps when enlarged text cannot fit four items. The two amount/slot fields retain a `minmax(0, …)` grid.
+At 920 px, horizontal padding and panel padding reduce to 24 px and the column gap to 32 px. At 760 px, the layout becomes one column with 16 px outer margins and 22 px panel padding; the decorative illustration, brand subtitle and Send heading ornament disappear. The brand name and wallet button use `--text-small` (14 px), retaining the wallet control's 44 px minimum height. This keeps the disconnected header on one row at 390 px in both languages; it can still wrap at narrower widths or with enlarged text. At 350 px, margins become 12 px and panel padding 18 px. Navigation wraps when enlarged text cannot fit four items. The two amount/slot fields retain a `minmax(0, …)` grid.
 
 Observed widths: 320, 390, 768 and 1440 px. Both language variants show the product, main form and action inside the 390×844 first screen. Expanded contract details and oversized balances were checked at 320/390/1440. The 200% text-size test passes without sideways scrolling; this is not a native browser-zoom claim.
 
@@ -62,6 +62,7 @@ The system is flat. Panels use a one-pixel structural border, without a shadow. 
 | `components/UI.tsx`: `Icon` | One 1.6 px outline SVG set using `currentColor`; decorative to accessibility APIs. Crown indicates best luck. Wallet-vendor marks remain separate, with their official colors. |
 | `Wallet.tsx`: `Wallet` | One wallet sheet reached from header or action gate. Named EIP-6963 rows, mobile deep links and Coinbase. Native dialog, explicit Tab loop, Escape/backdrop/close dismissal, focus return, per-row pending state and inline errors. |
 | `.tabs` | Real hash-navigation links; active state uses `aria-current="page"` and a red underline. |
+| `App.tsx`: `.skip-link` | First keyboard stop; activation focuses and scrolls the current main landmark without changing the route or losing entered form values. |
 | `.panel`, `.panel-heading` | Primary task surface and title; use for new task views rather than introducing another card system. |
 | `.field`, `.form-pair`, `.unit-input` | Persistent labels, appropriate input modes, 46 px minimum controls; units remain visible beside numeric entry. Creation errors reference the form error and mark the relevant field invalid. |
 | `.primary`, `.secondary`, `.text-button` | Filled transaction/continuation action, bordered secondary action, underlined auxiliary action. Primary buttons are at least 48 px high. Disabled state is native and visibly dimmed. |

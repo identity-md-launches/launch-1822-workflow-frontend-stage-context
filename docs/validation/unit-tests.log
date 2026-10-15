@@ -2,16 +2,16 @@
 > imd-hongbao@1.0.0 test
 > tsx --test tests/*.test.ts
 
-✔ passphrase derivation uses exact packed UTF-8, 32-byte chain, 20-byte address and scalar reduction (7.546443ms)
-✔ recipient-bound EIP-712 signatures reject altered packet, recipient, contract and chain (28.107777ms)
-✔ amount parser never rounds excessive precision and rejects zero, negative, exponential and oversized inputs (1.006406ms)
-✔ cryptographic suggestions include four random characters after the greeting (1.014503ms)
-✔ eligibility respects exact expiry and 24-hour settlement boundary, creator and terminal state (1.033799ms)
-✔ Robinhood swap encodes six fields, attested hook, direction, exact approvals and no ETH for ERC-20 (3.628792ms)
-✔ slippage uses integer floor and restricts the chosen range (0.390543ms)
-✔ unknown wallet chain is added with the unchanged handoff and switched again (0.90351ms)
-✔ recoverable errors are translated without disclosing raw wallet payloads (0.549276ms)
-✔ nested quoter and router reverts identify insufficient liquidity and slippage (1.915078ms)
+✔ passphrase derivation uses exact packed UTF-8, 32-byte chain, 20-byte address and scalar reduction (57.502788ms)
+✔ recipient-bound EIP-712 signatures reject altered packet, recipient, contract and chain (103.914764ms)
+✔ amount parser never rounds excessive precision and rejects zero, negative, exponential and oversized inputs (2.100774ms)
+✔ cryptographic suggestions include four random characters after the greeting (2.527865ms)
+✔ eligibility respects exact expiry and 24-hour settlement boundary, creator and terminal state (1.703921ms)
+✔ Robinhood swap encodes six fields, attested hook, direction, exact approvals and no ETH for ERC-20 (6.213167ms)
+✔ slippage uses integer floor and restricts the chosen range (0.68205ms)
+✔ unknown wallet chain is added with the unchanged handoff and switched again (2.073403ms)
+✔ recoverable errors are translated without disclosing raw wallet payloads (0.835534ms)
+✔ nested quoter and router reverts identify insufficient liquidity and slippage (4.598979ms)
 ℹ tests 10
 ℹ suites 0
 ℹ pass 10
@@ -19,7 +19,7 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1760.270687
+ℹ duration_ms 5111.099153
 npm notice
 npm notice New major version of npm available! 11.19.0 -> 12.2.0
 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0

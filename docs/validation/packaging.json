@@ -1,26 +1,28 @@
 {
-  "checkedAt": "2026-10-15T08:51:43.186096+00:00",
-  "method": "Complete independent Git snapshot of all existing tracked files plus proposed files, bundled with --all; also an incremental bundle of a temporary candidate commit against the original base commit.",
-  "baseCommit": "9689af00d42ca5dff84521a5c4d654dca44d292b",
+  "checkedAt": "2026-10-15T09:24:52.286641+00:00",
+  "method": "Complete independent Git snapshot of all current tracked files plus revision files, bundled with --all; incremental bundle of a temporary candidate commit against the accepted prior-round commit. Both verified with git bundle verify.",
+  "baseCommit": "cd505f16bca57f2e9442bdfef783f48b52a5e5c3",
   "submissionLimitBytes": 8388608,
+  "completeSnapshotBundleBytesBeforeThisReportUpdate": 1760413,
+  "incrementalBundleBytesBeforeThisReportUpdate": 1387757,
   "assertedCompleteSnapshotBundleUpperBoundBytes": 3145728,
   "assertedIncrementalBundleUpperBoundBytes": 3145728,
-  "proposedFileCountExcludingThisReport": 71,
-  "proposedFileBytesExcludingThisReport": 2423391,
-  "wholeTrackedTreeBytesExcludingThisReport": 3531923,
-  "staticExportBytes": 859010,
+  "wholeTrackedTreeBytesExcludingThisReport": 3723736,
+  "fileCountExcludingThisReport": 154,
+  "staticExportBytes": 859214,
   "exportAssetCountExcludingManifest": 13,
   "checks": {
     "allChangesWithinExplicitPathBudget": true,
+    "rootResponsesExplicitlyRequired": true,
     "rootBuildAndDeployedSourceUntouched": true,
-    "onlyExplicitlyAllowedIgnoreFileAdded": true,
+    "noIgnoreFileChangedInRevision": true,
     "noDependencyOrCacheDirectoryInCandidate": true,
     "noDependencyArchiveInCandidate": true,
     "noSubmodule": true,
     "noNewSymlink": true
   },
   "limitations": [
-    "The supplied repository lacks some historical Git objects, so bundling its entire ancestry fails. Both its current tracked tree and the exact pinned implementation ABIs are available. Complete tree snapshot and incremental submission sizes are measured instead.",
-    "Original workspace Git metadata is read-only. All commits and bundles here are temporary validation artifacts; the prepared workspace files still need the publisher commit."
+    "Some historical Git objects are unavailable, so a full-ancestry bundle is not claimed. Complete current-tree and incremental submission bundles were measured instead.",
+    "Workspace Git metadata is read-only. Commits/bundles were made only in the disposable validation checkout; the publisher must commit the prepared workspace files."
   ]
 }

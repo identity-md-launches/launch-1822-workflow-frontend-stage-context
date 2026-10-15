@@ -1037,12 +1037,13 @@
       display: none;
     }
     .brand strong {
-      font-size: var(--text-body);
+      font-size: var(--text-small);
     }
     .header-actions {
       gap: 4px;
     }
     .wallet-button {
+      font-size: var(--text-small);
       padding-inline: 10px;
     }
     .wallet-button svg {
@@ -1081,6 +1082,9 @@
     }
     .panel-heading h1 {
       font-size: var(--text-display);
+    }
+    .send-panel .heading-symbol {
+      display: none;
     }
     .heading-symbol svg {
       width: 30px;
