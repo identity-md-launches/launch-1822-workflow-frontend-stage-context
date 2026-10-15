@@ -1,0 +1,198 @@
+{
+  "checkedAt": "2026-10-15T08:43:58.583Z",
+  "method": "Read-only browser RPC. No wallet, private key, approval or transaction submission.",
+  "endpoints": [
+    {
+      "rpc": "https://robinhood-rpc.publicnode.com",
+      "chainId": 4663,
+      "code": [
+        {
+          "name": "LaunchToken",
+          "address": "0x9f5b6bc0c3e83dadf9169334defc9f9867efa4c7",
+          "bytes": 1579
+        },
+        {
+          "name": "HongbaoBox",
+          "address": "0xc609565a5252c458609896b9ff4403b2a020c5d6",
+          "bytes": 10682
+        },
+        {
+          "name": "IMD",
+          "address": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+          "bytes": 15448
+        },
+        {
+          "name": "poolManager",
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "bytes": 24009
+        },
+        {
+          "name": "universalRouter",
+          "address": "0x8876789976decbfcbbbe364623c63652db8c0904",
+          "bytes": 24546
+        },
+        {
+          "name": "quoter",
+          "address": "0x8dc178efb8111bb0973dd9d722ebeff267c98f94",
+          "bytes": 6118
+        },
+        {
+          "name": "stateView",
+          "address": "0xf3334192d15450cdd385c8b70e03f9a6bd9e673b",
+          "bytes": 3531
+        },
+        {
+          "name": "positionManager",
+          "address": "0x58daec3116aae6d93017baaea7749052e8a04fa7",
+          "bytes": 23877
+        },
+        {
+          "name": "permit2",
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "bytes": 9152
+        },
+        {
+          "name": "poolHook",
+          "address": "0x19bec7c2e1b2aadaf67b259744751a9960d66000",
+          "bytes": 488
+        }
+      ],
+      "application": {
+        "imd": "0x5F7Bb59365ce557C26dbcAa4EE9d39A4b95B7127",
+        "nextId": "1",
+        "totalEscrow": "0",
+        "minShare": "10000000000000000",
+        "maxSlots": "200",
+        "minDuration": "600",
+        "maxDuration": "604800",
+        "revealGrace": "86400",
+        "blockNumber": "89090794",
+        "timestamp": "1792053838",
+        "launchToken": {
+          "symbol": "HONGBAO",
+          "decimals": 18
+        }
+      },
+      "pool": {
+        "slot0": [
+          "50108289675009586237282760313922",
+          128998,
+          0,
+          12500
+        ],
+        "liquidity": "0"
+      },
+      "quotes": [
+        {
+          "zeroForOne": true,
+          "amountIn": "10000000000000000",
+          "amountOut": "3926885560341990674840",
+          "gasEstimate": "87612",
+          "method": "eth_call"
+        },
+        {
+          "zeroForOne": false,
+          "amountIn": "10000000000000000",
+          "method": "eth_call",
+          "error": "Not enough liquidity for this swap direction and amount. Reduce the amount or try again later."
+        }
+      ]
+    },
+    {
+      "rpc": "https://rpc.mainnet.chain.robinhood.com",
+      "chainId": 4663,
+      "code": [
+        {
+          "name": "LaunchToken",
+          "address": "0x9f5b6bc0c3e83dadf9169334defc9f9867efa4c7",
+          "bytes": 1579
+        },
+        {
+          "name": "HongbaoBox",
+          "address": "0xc609565a5252c458609896b9ff4403b2a020c5d6",
+          "bytes": 10682
+        },
+        {
+          "name": "IMD",
+          "address": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+          "bytes": 15448
+        },
+        {
+          "name": "poolManager",
+          "address": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+          "bytes": 24009
+        },
+        {
+          "name": "universalRouter",
+          "address": "0x8876789976decbfcbbbe364623c63652db8c0904",
+          "bytes": 24546
+        },
+        {
+          "name": "quoter",
+          "address": "0x8dc178efb8111bb0973dd9d722ebeff267c98f94",
+          "bytes": 6118
+        },
+        {
+          "name": "stateView",
+          "address": "0xf3334192d15450cdd385c8b70e03f9a6bd9e673b",
+          "bytes": 3531
+        },
+        {
+          "name": "positionManager",
+          "address": "0x58daec3116aae6d93017baaea7749052e8a04fa7",
+          "bytes": 23877
+        },
+        {
+          "name": "permit2",
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "bytes": 9152
+        },
+        {
+          "name": "poolHook",
+          "address": "0x19bec7c2e1b2aadaf67b259744751a9960d66000",
+          "bytes": 488
+        }
+      ],
+      "application": {
+        "imd": "0x5F7Bb59365ce557C26dbcAa4EE9d39A4b95B7127",
+        "nextId": "1",
+        "totalEscrow": "0",
+        "minShare": "10000000000000000",
+        "maxSlots": "200",
+        "minDuration": "600",
+        "maxDuration": "604800",
+        "revealGrace": "86400",
+        "blockNumber": "89090797",
+        "timestamp": "1792053839",
+        "launchToken": {
+          "symbol": "HONGBAO",
+          "decimals": 18
+        }
+      },
+      "pool": {
+        "slot0": [
+          "50108289675009586237282760313922",
+          128998,
+          0,
+          12500
+        ],
+        "liquidity": "0"
+      },
+      "quotes": [
+        {
+          "zeroForOne": true,
+          "amountIn": "10000000000000000",
+          "amountOut": "3926885560341990674840",
+          "gasEstimate": "87612",
+          "method": "eth_call"
+        },
+        {
+          "zeroForOne": false,
+          "amountIn": "10000000000000000",
+          "method": "eth_call",
+          "error": "Not enough liquidity for this swap direction and amount. Reduce the amount or try again later."
+        }
+      ]
+    }
+  ]
+}

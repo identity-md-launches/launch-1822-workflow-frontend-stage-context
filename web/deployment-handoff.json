@@ -1,0 +1,58 @@
+{
+  "chainId": 4663,
+  "poolKey": {
+    "fee": 12500,
+    "hooks": "0x19bec7c2e1b2aadaf67b259744751a9960d66000",
+    "currency0": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+    "currency1": "0x9f5b6bc0c3e83dadf9169334defc9f9867efa4c7",
+    "tickSpacing": 60
+  },
+  "repoUrl": "https://github.com/identity-md-launches/launch-1815-workflow-contract-stage-context",
+  "version": 1,
+  "launchId": "618acce0-87e8-4831-b419-25e12dde5f8d",
+  "manifest": {
+    "kind": "evm_project",
+    "pool": {
+      "fee": 12500,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127"
+    },
+    "notes": "LaunchToken sets its name and symbol to HONGBAO. HongbaoBox is an ownerless IMD red-packet contract configured with the supplied IMD token, independent of LaunchToken. No initialization calls are required. Lucky-packet creators can choose between revealing and allowing equal fallback settlement; Robinhood Chain's sequencer orders transactions. The factory supplies the liquidity pool, MerkleDistributor and initialization-only pool guard.",
+    "token": {
+      "name": "HONGBAO",
+      "symbol": "HONGBAO",
+      "contract": "LaunchToken",
+      "decimals": 18
+    },
+    "contracts": [
+      {
+        "contract": "HongbaoBox",
+        "constructorArgs": [
+          "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127"
+        ]
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "txHash": "0x5fb76b7295111f8f45cc0400be08ef8feaea7fc286e38e0513e45fec2fe76d39",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "address": "0x9f5b6bc0c3e83dadf9169334defc9f9867efa4c7",
+      "blockNumber": 89050661,
+      "creationCodeHash": "63495bcfa973ba9d5d57e94845c5d35160244a588a92fb5ba88e42643f689c44"
+    },
+    {
+      "name": "HongbaoBox",
+      "txHash": "0x5fb76b7295111f8f45cc0400be08ef8feaea7fc286e38e0513e45fec2fe76d39",
+      "abiHash": "215494c91a286f7d3c192b609342fd8b0cdae710f3dd6eeac439b6a4ca57e200",
+      "address": "0xc609565a5252c458609896b9ff4403b2a020c5d6",
+      "blockNumber": 89050661,
+      "creationCodeHash": "aeaa1c0b284b62ecaa7ea1a8ad6fd74b6f7ddada5bc2082c62e37ed83b87abc3"
+    }
+  ],
+  "sourceCommit": "9689af00d42ca5dff84521a5c4d654dca44d292b",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "662ab0aaa5f2035fdbc601cf90b31eb3cb8cc510d1082e2bfdbf220d4eb50d20"
+}

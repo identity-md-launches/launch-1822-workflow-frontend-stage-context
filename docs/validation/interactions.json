@@ -1,0 +1,107 @@
+{
+  "testedAt": "2026-10-15T08:40:48.842Z",
+  "boundary": "Production export; mocked EIP-1193 wallet and JSON-RPC. No live transactions.",
+  "results": [
+    {
+      "name": "Chinese first screen, relative subpath, metadata and reflow at 320/390/768/1440",
+      "passed": true,
+      "durationMs": 205
+    },
+    {
+      "name": "English toggle, semantic labels, no serious/critical accessibility findings",
+      "passed": true,
+      "durationMs": 811
+    },
+    {
+      "name": "EIP-6963 named wallet picker, keyboard focus trap and Escape focus return",
+      "passed": true,
+      "durationMs": 108
+    },
+    {
+      "name": "Live balances after connect, invalid amount/slots/precision and weak-passphrase warning",
+      "passed": true,
+      "durationMs": 150
+    },
+    {
+      "name": "Rejected approval recovers, exact IMD approval is separate and waits for confirmation",
+      "passed": true,
+      "durationMs": 229
+    },
+    {
+      "name": "Lucky create requires private backup, simulates first, shows receipt-derived share link",
+      "passed": true,
+      "durationMs": 333
+    },
+    {
+      "name": "Recipient-bound grab rejects wrong phrase; pasted recipient receives the signed slot; duplicate disabled",
+      "passed": true,
+      "durationMs": 535
+    },
+    {
+      "name": "Creator reveal restores backup, rejects wrong code and renders best-luck crown",
+      "passed": true,
+      "durationMs": 210
+    },
+    {
+      "name": "Permissionless equal settlement and refund use contract timing and reach terminal states",
+      "passed": true,
+      "durationMs": 302
+    },
+    {
+      "name": "Deferred payout and surplus controls, destination protection and token transfer",
+      "passed": true,
+      "durationMs": 610
+    },
+    {
+      "name": "Swap quote is eth_call; both approval layers precede six-field router execute; reverse trade works",
+      "passed": true,
+      "durationMs": 1161
+    },
+    {
+      "name": "Wallet chain changes disable transactions and a single switch restores the network",
+      "passed": true,
+      "durationMs": 54
+    },
+    {
+      "name": "Long balances, full addresses, expanded details and text enlargement reflow",
+      "passed": true,
+      "durationMs": 331
+    },
+    {
+      "name": "Approval stays disabled after broadcast until its receipt confirms",
+      "passed": true,
+      "durationMs": 6034
+    },
+    {
+      "name": "Missing contract code fails closed; visible retry recovers public RPC reads",
+      "passed": true,
+      "durationMs": 1781
+    },
+    {
+      "name": "Reload preserves the pending-transaction lock and recovers confirmation without duplicate sends",
+      "passed": true,
+      "durationMs": 7167
+    },
+    {
+      "name": "Unknown-chain add flow and wallet rejection recovery",
+      "passed": true,
+      "durationMs": 535
+    },
+    {
+      "name": "Mobile wallet links preserve gateway subpath and hash, all four marks and Coinbase Smart Wallet",
+      "passed": true,
+      "durationMs": 552
+    },
+    {
+      "name": "Tampered ABI fails closed before connecting or sending",
+      "passed": true,
+      "durationMs": 172
+    },
+    {
+      "name": "Production script and local resources have no runtime failures",
+      "passed": true,
+      "durationMs": 0
+    }
+  ],
+  "runtimeErrors": []
+}

@@ -1,0 +1,36 @@
+
+> imd-hongbao@1.0.0 build
+> npm run typecheck && vite build && node scripts/export.mjs
+
+
+> imd-hongbao@1.0.0 typecheck
+> tsc --noEmit
+
+npm notice
+npm notice New major version of npm available! 11.19.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 1820 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/index.html                   1.30 kB │ gzip:   0.66 kB
+../dist/assets/index-BRo3Lb1P.css   16.75 kB │ gzip:   4.20 kB
+../dist/assets/ccip-D4XZq1-u.js      2.84 kB │ gzip:   1.31 kB
+../dist/assets/dist-DsoUKFaQ.js     98.96 kB │ gzip:  31.97 kB
+../dist/assets/index-DDJRIzca.js   662.86 kB │ gzip: 201.42 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 612ms
+Verified handoff, network, pool key, 2 pinned ABIs and all 13 assets (859010 bytes).
+npm notice
+npm notice New major version of npm available! 11.19.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
